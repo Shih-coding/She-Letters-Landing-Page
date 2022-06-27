@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>She Letters✍🏻</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: blueviolet;
+        border: 1px solid blueviolet;
+        padding: 15px;
+        font-size: 18px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        border-radius: 4px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 20px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .image1 {
+        display: block;
+        margin: auto;
+        border-radius: 50px;
+      }
+      .image2 {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        margin: 20px 0 10px;
+      }
+      button {
+        margin: 20px 20px 20px 185px;
+        background: blueviolet;
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+
+      .learn-more {
+        margin: auto;
+        padding: 10px 10px;
+        background: #5e87b8;
+        text-decoration: wavy;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        margin-top: 10px;
+        color: white;
+        font-size: 14px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        border-radius: 20px;
+      }
+
+      .learn-more :hover {
+        text-decoration: underline;
+      }
+      .footer {
+        text-align: center;
+        font-weight: bolder;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(220, 217, 249) 0%,
+          rgb(172, 224, 217) 89.8%
+        );
+      }
+
+      body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/451/original/WhatsApp_Image_2022-03-03_at_10.05.18_AM.jpeg?1646273859");
+        background-repeat: repeat;
+        background-size: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/453/original/WhatsApp_Image_2022-03-03_at_10.48.09_AM.jpeg?1646275760"
+        class="image1"
+        alt="logo"
+        width="200"
+      />
+      <h1>Modern Calligraphy is therapeutic and creative</h1>
+      <hr />
+      <h2>Taking it letter by letter...</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/450/original/WhatsApp_Image_2022-03-03_at_10.05.49_AM.jpeg?1646273502"
+        class="image2"
+        alt="Calligraphy"
+        width="800"
+      />
+      <p>
+        Modern calligraphy is sometimes also referred to as hand lettering.
+        Essentially, it's an art form that consists of creating artistic
+        lettering using repetitive upstrokes, downstrokes, and repeating shapes.
+        Anyone can learn it and develop their own style! To get started, apply
+        for the workshop to learn the basic strokes!
+      </p>
+      <br />
+      <span>
+        <a
+          href="https://www.skillshare.com/blog/the-ultimate-guide-to-modern-calligraphy-1/#:~:text=Modern%20calligraphy%20is%20sometimes%20also,%2C%20downstrokes%2C%20and%20repeating%20shapes."
+          target="blank"
+          class="learn-more"
+        >
+          📚 <em><strong>Learn more on Skill Share</strong></em>
+        </a>
+        <button class="buy-button">Apply for workshop</button>
+      </span>
+      <hr />
+      <p class="footer">This page was built by Rebecca Shih</p>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let answer = prompt("Are you excited to learn how to letter?");
+
+        if (answer === "yes") {
+          alert(
+            "Thank you, " +
+              name +
+              ", please continue to registration and happy lettering!😁"
+          );
+        } else {
+          let heading = document.querySelector("h2");
+          heading.innerHTML =
+            "That's okay, " + name + ", just take it letter by letter!😊";
+        }
+      }
+
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
