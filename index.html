@@ -11,6 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>She Letters✍🏻</title>
     <style>
+      body {
+        background-color: rgb(239, 234, 249);
+      }
+
       h1 {
         text-align: center;
         color: black;
@@ -36,9 +40,11 @@
       .image2 {
         display: block;
         margin: 0 auto;
-        max-width: 400px;
+        max-width: 100%;
         border-radius: 10px;
       }
+
+
       p {
         line-height: 1.5;
         font-size: 14px;
@@ -99,6 +105,7 @@
         max-height: 100%;
         margin: 50px auto;
         padding: 30px 60px;
+        overflow-x: hidden;
         background: radial-gradient(
           circle at 10% 20%,
           rgb(220, 217, 249) 0%,
@@ -106,9 +113,15 @@
         );
       }
 
-      body {
-        background-color: rgb(239, 234, 249);
-      }
+  @media (max-width: 280px) {
+  .container {
+    margin: 0 auto;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+
 
     </style>
   </head>
@@ -116,7 +129,7 @@
     <div class="container shadow-lg p-5 mb-5 bg-body rounded">
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/453/original/WhatsApp_Image_2022-03-03_at_10.48.09_AM.jpeg?1646275760"
-        class="image1"
+        class="image1 img-fluid"
         alt="logo"
         width="200"
       />
@@ -126,7 +139,7 @@
       <hr />
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/450/original/WhatsApp_Image_2022-03-03_at_10.05.49_AM.jpeg?1646273502"
-        class="image2"
+        class="image2 img-fluid"
         alt="Calligraphy"
       />
       <p>
@@ -136,20 +149,19 @@
         Anyone can learn it and develop their own style! To get started, apply
         for the workshop to learn the basic strokes!
       </p>
-      <br />
       <div class="links">
         <div class="row">
-      <div class="col-6 text-center">
+      <div class="col-sm-6 mb-3 text-center">
         <button class="learn-more">
-          <a href="https://www.skillshare.com/blog/the-ultimate-guide-to-modern-calligraphy-1/#:~:text=Modern%20calligraphy%20is%20sometimes%20also,%2C%20downstrokes%2C%20and%20repeating%20shapes">Learn more on Skillshare</a>  
-        </button></div>        
-        <div class="col-6 text-center">
+          <a href="https://www.skillshare.com/blog/the-ultimate-guide-to-modern-calligraphy-1/#:~:text=Modern%20calligraphy%20is%20sometimes%20also,%2C%20downstrokes%2C%20and%20repeating%20shapes"  target="_blank" title="Modern_calligraphy">Learn more on Skillshare</a>  
+        </button></div>    
+        <div class="col-sm-6 text-center">
         <button class="buy-button">Apply for workshop</button>
         </div>
       </div>
     </div>
       <hr />
-      <p class="footer">This page was built by Rebecca Shih and is  <a href="https://github.com/Shih-coding/weather-app">open-sourced on GitHub</a></p>
+      <p class="footer">This page was built by Rebecca Shih and is  <a href="https://github.com/Shih-coding/She-Letters-Landing-Page"  target="_blank" title="SheLetter_GitHub">open-sourced on GitHub</a></p>
     </div>
     <script>
       function buy() {
@@ -165,7 +177,7 @@
         } else {
           let heading = document.querySelector("h2");
           heading.innerHTML =
-            "That's okay, " + name + ", just take it letter by letter!😊";
+            "That's okay, " + name + ", have a good day!😊";
         }
       }
 
